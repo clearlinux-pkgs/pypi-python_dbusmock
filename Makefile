@@ -1,5 +1,5 @@
 PKG_NAME := pypi-python_dbusmock
-URL = https://files.pythonhosted.org/packages/4e/43/fece2d40cc9a89ffc0d414603084500389fbfe43192ec64947517b1e89d3/python-dbusmock-0.25.0.tar.gz
+URL = https://files.pythonhosted.org/packages/d6/b5/478581d5778ad8046bf943878d7c86e5e9fe6f130dedb7ca7517666bc536/python-dbusmock-0.26.1.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common

@@ -1,3 +1,12 @@
+## [0.26.1] - 2022-02-25
+- Fix README content type to Markdown, to fix releasing to PyPi
+
+## [0.26.0] - 2022-02-25
+- logind template: Add locking API (thanks Andy Holmes)
+- bluez5 template: Add RemoveDevice() and RemoveAdapterWithDevices() methods,
+  fix properties (thanks Bastien Nocera)
+- Documentation improvements, particularly wrt. raising errors
+
 ## [0.25.0] - 2021-12-25
 - bluez template: Implement adapter discovery, connect, disconnect, and removal
   (thanks Bastien Nocera)
