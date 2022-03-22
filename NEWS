@@ -1,3 +1,12 @@
+## [0.27.3] - 2022-03-22
+- packit: Fix file name to sync
+
+## [0.27.2] - 2022-03-22
+- packit: Really fix Fedora dist-git syncing
+
+## [0.27.1] - 2022-03-22
+- packit: Fix Fedora dist-git syncing
+
 ## [0.27.0] - 2022-03-22
 - Do not register standard session service directories, add API to enable selected services (thanks Benjamin Berg)
 - Log static method calls from templates (thanks Peter Hutterer)
