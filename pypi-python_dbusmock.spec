@@ -4,7 +4,7 @@
 #
 Name     : pypi-python_dbusmock
 Version  : 0.27.5
-Release  : 17
+Release  : 18
 URL      : https://files.pythonhosted.org/packages/d0/89/54ef3030f6a0ee5557d0c411085b8f76541c3595404c4879f8f109351eb9/python-dbusmock-0.27.5.tar.gz
 Source0  : https://files.pythonhosted.org/packages/d0/89/54ef3030f6a0ee5557d0c411085b8f76541c3595404c4879f8f109351eb9/python-dbusmock-0.27.5.tar.gz
 Summary  : Mock D-Bus objects
@@ -62,6 +62,7 @@ python components for the pypi-python_dbusmock package.
 Summary: python3 components for the pypi-python_dbusmock package.
 Group: Default
 Requires: python3-core
+Provides: pypi(python_dbusmock)
 
 %description python3
 python3 components for the pypi-python_dbusmock package.
@@ -76,7 +77,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1649171849
+export SOURCE_DATE_EPOCH=1652829767
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
