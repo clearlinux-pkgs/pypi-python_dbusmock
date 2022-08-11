@@ -1,0 +1,53 @@
+From 497dbc894b373d7c6f020704de7247ce54b695d6 Mon Sep 17 00:00:00 2001
+From: William Douglas <william.douglas@intel.com>
+Date: Thu, 11 Aug 2022 16:45:34 -0700
+Subject: [PATCH] Remove dbus requirement
+
+This is pulled in at the distro content level, if users are mixing and
+matching distro content resoltion for python it may cause issues and
+this package should be avoided (along with dbus-python).
+
+Signed-off-by: William Douglas <william.douglas@intel.com>
+---
+ pyproject.toml                        | 2 --
+ python_dbusmock.egg-info/requires.txt | 1 -
+ setup.cfg                             | 2 --
+ 3 files changed, 5 deletions(-)
+ delete mode 100644 python_dbusmock.egg-info/requires.txt
+
+diff --git a/pyproject.toml b/pyproject.toml
+index c725472..f2b2668 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -26,8 +26,6 @@ classifiers = [
+ dynamic = ["version"]
+ requires-python = ">=3.6"
+ 
+-dependencies = ["dbus-python"]
+-
+ [project.urls]
+ homepage = "https://github.com/martinpitt/python-dbusmock"
+ 
+diff --git a/python_dbusmock.egg-info/requires.txt b/python_dbusmock.egg-info/requires.txt
+deleted file mode 100644
+index 555438c..0000000
+--- a/python_dbusmock.egg-info/requires.txt
++++ /dev/null
+@@ -1 +0,0 @@
+-dbus-python
+diff --git a/setup.cfg b/setup.cfg
+index dde5633..15816d8 100644
+--- a/setup.cfg
++++ b/setup.cfg
+@@ -26,8 +26,6 @@ classifiers =
+ packages = 
+ 	dbusmock
+ 	dbusmock.templates
+-install_requires = 
+-	dbus-python
+ 
+ [egg_info]
+ tag_build = 
+-- 
+2.36.1
+

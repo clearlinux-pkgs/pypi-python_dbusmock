@@ -4,7 +4,7 @@
 #
 Name     : pypi-python_dbusmock
 Version  : 0.28.4
-Release  : 23
+Release  : 26
 URL      : https://files.pythonhosted.org/packages/02/e0/7f5769a1131c0565c7a7153681f5a1ce2782a196be220fc1eb5409c2ba40/python-dbusmock-0.28.4.tar.gz
 Source0  : https://files.pythonhosted.org/packages/02/e0/7f5769a1131c0565c7a7153681f5a1ce2782a196be220fc1eb5409c2ba40/python-dbusmock-0.28.4.tar.gz
 Summary  : Mock D-Bus objects
@@ -17,6 +17,7 @@ BuildRequires : buildreq-distutils3
 BuildRequires : pypi(dbus_python)
 BuildRequires : pypi(setuptools)
 BuildRequires : pypi(setuptools_scm)
+Patch1: 0001-Remove-dbus-requirement.patch
 
 %description
 ===============
@@ -75,6 +76,7 @@ python3 components for the pypi-python_dbusmock package.
 %prep
 %setup -q -n python-dbusmock-0.28.4
 cd %{_builddir}/python-dbusmock-0.28.4
+%patch1 -p1
 pushd ..
 cp -a python-dbusmock-0.28.4 buildavx2
 popd
@@ -84,7 +86,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1658266284
+export SOURCE_DATE_EPOCH=1660262361
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -109,7 +111,7 @@ popd
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/pypi-python_dbusmock
-cp %{_builddir}/python-dbusmock-0.28.4/COPYING %{buildroot}/usr/share/package-licenses/pypi-python_dbusmock/f45ee1c765646813b442ca58de72e20a64a7ddba
+cp %{_builddir}/python-dbusmock-%{version}/COPYING %{buildroot}/usr/share/package-licenses/pypi-python_dbusmock/f45ee1c765646813b442ca58de72e20a64a7ddba
 pip install --root=%{buildroot} --no-deps --ignore-installed dist/*.whl
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
