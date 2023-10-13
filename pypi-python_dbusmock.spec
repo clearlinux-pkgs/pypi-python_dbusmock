@@ -5,7 +5,7 @@
 #
 Name     : pypi-python_dbusmock
 Version  : 0.29.1
-Release  : 36
+Release  : 37
 URL      : https://files.pythonhosted.org/packages/d3/13/aa359df74782ad9a7d3f9f392b4063a1f3d568554571587d4d16aaf70044/python-dbusmock-0.29.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/d3/13/aa359df74782ad9a7d3f9f392b4063a1f3d568554571587d4d16aaf70044/python-dbusmock-0.29.1.tar.gz
 Summary  : Mock D-Bus objects
