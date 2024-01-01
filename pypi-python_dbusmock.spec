@@ -6,10 +6,10 @@
 # autospec commit: c1050fe
 #
 Name     : pypi-python_dbusmock
-Version  : 0.30.1
-Release  : 41
-URL      : https://files.pythonhosted.org/packages/e8/56/dda0b3d251a479c7fc2d634c723ab1d1a84294607213720daa7916f2c942/python-dbusmock-0.30.1.tar.gz
-Source0  : https://files.pythonhosted.org/packages/e8/56/dda0b3d251a479c7fc2d634c723ab1d1a84294607213720daa7916f2c942/python-dbusmock-0.30.1.tar.gz
+Version  : 0.30.2
+Release  : 42
+URL      : https://files.pythonhosted.org/packages/a3/d7/c1775cc770066966cad9e48176dc75f3bdef2fb523fb131b797dc18cedb2/python-dbusmock-0.30.2.tar.gz
+Source0  : https://files.pythonhosted.org/packages/a3/d7/c1775cc770066966cad9e48176dc75f3bdef2fb523fb131b797dc18cedb2/python-dbusmock-0.30.2.tar.gz
 Summary  : Mock D-Bus objects
 Group    : Development/Tools
 License  : LGPL-3.0 LGPL-3.0+ LGPL-3.0-or-later
@@ -56,11 +56,11 @@ python3 components for the pypi-python_dbusmock package.
 
 
 %prep
-%setup -q -n python-dbusmock-0.30.1
-cd %{_builddir}/python-dbusmock-0.30.1
+%setup -q -n python-dbusmock-0.30.2
+cd %{_builddir}/python-dbusmock-0.30.2
 %patch -P 1 -p1
 pushd ..
-cp -a python-dbusmock-0.30.1 buildavx2
+cp -a python-dbusmock-0.30.2 buildavx2
 popd
 
 %build
@@ -68,7 +68,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1703608120
+export SOURCE_DATE_EPOCH=1704141761
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
